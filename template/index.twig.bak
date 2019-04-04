@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projecte</title>
+    <style>
+    
+
+body {
+    
+background-color: #04b486;	 
+}
+
+div.vid{
+
+background-color:#A9F5D0;
+
+} 
+
+@media screen and (min-width:1200px){
+body {
+    
+background-color: #04b486;	 
+}
+
+div.d {
+    line-height: 200%;
+}
+
+div.vid{
+
+background-color:#A9F5D0;
+
+}
+div.cent{
+
+text-align: center;
+
+}
+div.sub{
+color: white;
+background-color: #666666;
+opacity: 0.5;
+
+}
+    </style>
+    <script>
+    function projecte() {
+    
+    }
+    </script>
+  </head>
+  <body>
+    {% extends "base.twig" %} {% block title %} Lista {% endblock %} 
+        {% block content %}
+<p>img src="{{ asset('images/logo.png') }}" alt="Symfony!" /></p>
+
+{% endblock %}
+    {% block content %}
+<p>producto {{ name }}!</p>
+{% endblock %}
+
+    {% block content %}
+<p> {{ descripcion }}!</p>
+{% endblock %}
+    {% block content %}
+<p> {{ precio }}!</p>
+{% endblock %}
+  </body>
+</html>

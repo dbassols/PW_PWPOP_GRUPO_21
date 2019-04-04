@@ -1,0 +1,38 @@
+<?php
+
+
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+
+
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$app = new \Slim\App;
+
+require_once __DIR__ . '/../config/routes.php';
+
+
+$settings = require_once __DIR__ . '/../config/settings.php';
+
+$app = new \Slim\App($settings);
+
+
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = new \Slim\App;
+
+$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
+    $name = $args['name'];
+    $response->getBody()->write("Hello, $name");
+
+    return $response;
+});
+
+
+require_once __DIR__ . '/../config/dependencies.php';
+
+$app->run();
+
+?>

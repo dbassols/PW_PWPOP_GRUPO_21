@@ -1,0 +1,19 @@
+{
+    "name": "david/htdocs",
+    "authors": [
+        {
+            "name": "David Bassols",
+            "email": "david@localhost.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.12"
+    }
+}
+{
+  "autoload": {
+    "psr-4": {
+      "SallePW\\SlimApp\\": "src/"
+    }
+  }
+}
